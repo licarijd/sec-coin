@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+	
+#faq {font-family: Lato, sans-serif;  max-width: 900px; margin: 94px auto 0;}
+#faq h1 {text-align: center; margin: 150px 0 40px 0; font-size: 40px;font-weight: 300;color: #222;}
+
+
+ul#faqlist {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+	margin-bottom: 40px;
+}
+ul#faqlist > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 14px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:6px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	font: 700 18px 'Lato', 'sans-serif';
+	min-height: 50px;
+	cursor: pointer;
+	
+}
+ul#faqlist> li:before {
+	
+	/* Position and style the number */
+	position:absolute;
+	content: "○";
+	top: -10px;
+	left:-17px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing: border-box;
+	padding: 10px 0 0 1px;
+	color: #888888;/*  #1f92cd; */
+	font: 900 30px 'Lato', 'sans-serif';
+}
+
+ul#faqlist> li.active:before {
+color:  #1f92cd;
+}
+
+li.question h2 {
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+	font: 300 22px 'Lato', sans-serif;
+	color: #222;  /* #1f92cd */;
+}
+
+li.question p, li.question ul li, li.question ol li  {
+	font: normal 17px 'Lato', sans-serif;
+	color:  #666;
+	display: none;
+}
+
+li.question.active h2 {
+	color: #1f92cd;
+}
+
+@media (max-width: 991px) {
+	ul#faqlist> li:before {
+font-size: 15px;
+top: 0;
+}
+}
