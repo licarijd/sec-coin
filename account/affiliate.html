@@ -106,7 +106,12 @@
 
             function signOut(){
                         firebase.auth().signOut().then(function() {
+                            var authenticated = true;
                         // Sign-out successful.
+                            //save user data
+                            firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticated").set({
+                                authenticated
+                            });
                         }).catch(function(error) {
                         // An error happened.
                         });

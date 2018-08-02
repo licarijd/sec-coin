@@ -84,12 +84,10 @@
                 ref.on("child_added", function (snapshot) {
                       console.log(snapshot.val())
                       
-
                      if (snapshot.val()=="on"){
                          console.log("2FA enabled")
 
-                         window.scrollTo(0,document.body.scrollHeight);
-                            setVisibility("2FA")
+                         check2FASessionState();
                             
                       } else {
                         console.log("2FA disabled")
@@ -103,6 +101,29 @@
 		        });
             //}, 2000);
                     //document.getElementById("page-top").style.visibility="visible"
+            }
+
+            function check2FASessionState(){
+
+                var ref = firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession")
+                ref.on("child_added", function (snapshot) {
+                        console.log(snapshot.val())
+                      
+                        if (snapshot.val()==true){
+                            window.scrollTo(0,document.body.scrollHeight);
+                            setVisibility("2FA")
+
+                        }else {
+                            console.log("2FA disabled")
+
+                            window.scrollTo(0,0);
+                            setVisibility("page-top")
+                            loadEthAddress()
+                      }
+                    }, function (errorObject) {
+  			        console.log("error loading eth address: " + errorObject);
+		        });
+                
             }
 
             function setVisibility(condition){
