@@ -212,7 +212,7 @@ console.log("error loading eth address: " + errorObject);
         var xhttp = new XMLHttpRequest; 
 
         //xhttp.open("POST", "http://localhost:8080/getBalance", true);
-        xhttp.open("POST", "https://thrintel-market.herokuapp.com/getBalance", true);
+        xhttp.open("POST", "/getBalance", true);
         //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         //xhttp.send({"account": "0x281055afc982d96fab65b3a49cac8b878184cb16"});
         xhttp.setRequestHeader("Content-Type", "application/json");
@@ -1031,7 +1031,7 @@ var subscribe_url = '/es', check_email = 'Please, check your email address!';
                 console.log("verifying...")
                 var xhttp = new XMLHttpRequest;
 
-                    xhttp.open("POST", "https://thrintel-market.herokuapp.com/verifyQRCode", true);
+                    xhttp.open("POST", "/verifyQRCode", true);
                     xhttp.setRequestHeader("Content-Type", "application/json");
                     console.log(token)
                     xhttp.send(JSON.stringify({token:token,uid:firebase.auth().currentUser.uid}));
