@@ -46,13 +46,17 @@
                         
 
                         if (snapshot.val()=="on"){
-                            console.log("2FA enabled")
-                            setVisibility("2FA")
+                         console.log("2FA enabled")
+                         document.getElementById("page-top").style.visibility="hidden"
+                         check2FASessionState();
                             
-                        } else {
+                      } else {
                         console.log("2FA disabled")
+
+                        window.scrollTo(0,0);
                             setVisibility("page-top")
-                        }
+                            loadEthAddress()
+                      }
                 }, function (errorObject) {
                         console.log("error loading eth address: " + errorObject);
                 });
@@ -200,12 +204,12 @@
         <link href="css/all.css?v=n82" rel="stylesheet">    </head>
         <body style="visibility: visible;" id="page-top" class="b-lng-es">
 
-                <!-- Google Tag Manager (noscript) -->
+                <!-- Google Tag Manager (noscript) 
                 <noscript>
                     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN5MQ88"
                             height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </noscript>
-                <!-- End Google Tag Manager (noscript) -->
+                 End Google Tag Manager (noscript) -->
             
                 
             
@@ -876,6 +880,38 @@
                 <script>
                     var subscribe_url = '/es', check_email = 'Please, check your email address!';
                 </script>
+                <div id="2FA" class="container" style="visibility:hidden">
+                    <div class="acc-content bs-3">
+        
+                                            <div class="acc-right wb pad-panel pb-0">
+                                <div class="box b-auth-check">
+                                    <h4 class="box-title text-center">Two-Factor Authentication.</h4>
+                                    <div class="auth-box-check  t-30">
+                                        <table class="w-100">
+                                            <tbody><tr>
+                                                <td class="text-right img">
+                                                    <img class="img-fluid" style="max-width: 50px;" src="/img/g-auth-1.png" alt="">
+                                                </td>
+                                                <td class="txt text-left">
+                                                    <p class="note text-left">Please enter your Google Authenticator token.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+        
+                                        <div class="t-30">
+                                            <!--<form method="post">-->
+                                                <input type="text" class="form-control" id="authkey" name="auth-password" value="" style="max-width: 250px; margin: 30px auto 0;" placeholder="2FA Token">
+                                                <div class="help-block"></div>
+                                                <div class="text-center t-50">
+                                                    <button onclick="verifyQRCode(authkey.value)" class="btn btn-red btn-red-shadow btn-part-block">Authenticate</button>
+                                                </div>
+                                            <!--</form>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
             
                 
             

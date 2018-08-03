@@ -288,7 +288,13 @@
                     location.href = "account/accept-terms.html"
                 } else {
                     console.log("existing user")
-                    location.href = "account/index.html"
+                    var authenticated = false
+                    firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession").set({
+                                authenticated
+                            }).then(function(result) {
+                                console.log("done")
+                                location.href = "account/index.html"
+                            });
                 }
                 
                 
