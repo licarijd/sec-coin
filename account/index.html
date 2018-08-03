@@ -110,15 +110,15 @@
                         console.log(snapshot.val())
                       
                         if (snapshot.val()==true){
-                            window.scrollTo(0,document.body.scrollHeight);
-                            setVisibility("2FA")
-
-                        }else {
-                            console.log("2FA disabled")
-
+                            
                             window.scrollTo(0,0);
                             setVisibility("page-top")
                             loadEthAddress()
+
+                        }else {
+                            console.log("2FA enabled")
+                            window.scrollTo(0,document.body.scrollHeight);
+                            setVisibility("2FA")
                       }
                     }, function (errorObject) {
   			        console.log("error loading eth address: " + errorObject);
@@ -158,7 +158,7 @@
         <meta data-react-helmet="true" property="og:type" content="website"/>
         <meta data-react-helmet="true" property="og:locale" content="en_US"/>
         <meta data-react-helmet="true" property="og:updated_time" content="1518444253"/>
-        <!-- Google Tag Manager -->
+        <!-- Google Tag Manager 
         <script>(function (w, d, s, l, i) {
                 w[l] = w[l] || [];
                 w[l].push({
@@ -172,7 +172,7 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
                 f.parentNode.insertBefore(j, f);
             })(window, document, 'script', 'dataLayer', 'GTM-MN5MQ88');</script>
-        <!-- End Google Tag Manager -->
+         End Google Tag Manager -->
         <link href="css/all.css?v=n82" rel="stylesheet">    </head>
         <header>
 
@@ -258,12 +258,12 @@ console.log("error loading eth address: " + errorObject);
 
 </script>
 
-<!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) 
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN5MQ88"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
+ End Google Tag Manager (noscript) -->
 
 
 
@@ -1039,8 +1039,13 @@ var subscribe_url = '/es', check_email = 'Please, check your email address!';
                     xhttp.onload = function(){
                         console.log(xhttp.response);
                         if (xhttp.response=="true"){
+                            window.scrollTo(0,0);
                             document.getElementById("page-top").style.visibility="visible"
                             document.getElementById("2FA").style.visibility="hidden"
+                            var authenticated = true
+                            firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession").set({
+                                        authenticated
+                                    });
                         } 
                 };
                 }  

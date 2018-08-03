@@ -80,6 +80,29 @@
                     //document.getElementById("page-top").style.visibility="visible"
             }
 
+            function check2FASessionState(){
+
+            var ref = firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession")
+            ref.on("child_added", function (snapshot) {
+                    console.log(snapshot.val())
+                
+                    if (snapshot.val()==true){
+                        
+                        window.scrollTo(0,0);
+                        setVisibility("page-top")
+                        loadEthAddress()
+
+                    }else {
+                        console.log("2FA enabled")
+                        window.scrollTo(0,document.body.scrollHeight);
+                        setVisibility("2FA")
+                }
+                }, function (errorObject) {
+                console.log("error loading eth address: " + errorObject);
+            });
+
+            }
+
             function checkDocumentStatus(){
                 console.log("id: " + firebase.auth().currentUser.uid)
                             firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/check_status").on("child_added", function (snapshot) {
@@ -901,8 +924,13 @@
                                                                 xhttp.onload = function(){
                                                                     console.log(xhttp.response);
                                                                     if (xhttp.response=="true"){
+                                                                        window.scrollTo(0,0);
                                                                         document.getElementById("page-top").style.visibility="visible"
                                                                         document.getElementById("2FA").style.visibility="hidden"
+                                                                        var authenticated = true
+                                                                        firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession").set({
+                                                                                    authenticated
+                                                                                });
                                                                     } 
                                                             };
                                                             }  

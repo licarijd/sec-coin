@@ -60,6 +60,29 @@
                     //document.getElementById("page-top").style.visibility="visible"
             }
 
+            function check2FASessionState(){
+
+            var ref = firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession")
+            ref.on("child_added", function (snapshot) {
+                    console.log(snapshot.val())
+                
+                    if (snapshot.val()==true){
+                        
+                        window.scrollTo(0,0);
+                        setVisibility("page-top")
+                        loadEthAddress()
+
+                    }else {
+                        console.log("2FA enabled")
+                        window.scrollTo(0,document.body.scrollHeight);
+                        setVisibility("2FA")
+                }
+                }, function (errorObject) {
+                console.log("error loading eth address: " + errorObject);
+            });
+
+            }
+
             function setVisibility(condition){
                 console.log("visible: " + condition)
                 document.getElementById(condition).style.visibility="visible"
@@ -117,6 +140,30 @@
                         });
                     }
             
+        </script>
+        <script>
+            function verifyQRCode(token){
+                    console.log("verifying...")
+                    var xhttp = new XMLHttpRequest;
+    
+                        xhttp.open("POST", "https://thrintel-market.herokuapp.com/verifyQRCode", true);
+                        xhttp.setRequestHeader("Content-Type", "application/json");
+                        console.log(token)
+                        xhttp.send(JSON.stringify({token:token,uid:firebase.auth().currentUser.uid}));
+        
+                        xhttp.onload = function(){
+                            console.log(xhttp.response);
+                            if (xhttp.response=="true"){
+                                window.scrollTo(0,0);
+                                document.getElementById("page-top").style.visibility="visible"
+                                document.getElementById("2FA").style.visibility="hidden"
+                                var authenticated = true
+                                firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession").set({
+                                            authenticated
+                                        });
+                            } 
+                    };
+                    }  
         </script>
         <link rel="canonical" href="https://vinchain.io/en"/>
         <link href="https://vinchain.io/en" hreflang="en" rel="alternate">

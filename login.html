@@ -276,8 +276,11 @@
                     var authenticated = false
                     firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession").set({
                                 authenticated
+                            }).then(function(result) {
+                                console.log("done")
+                                location.href = "account/index.html"
                             });
-                    location.href = "account/index.html"
+                    //location.href = "account/index.html"
                 }
                 
                 

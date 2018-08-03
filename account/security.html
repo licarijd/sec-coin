@@ -816,7 +816,11 @@
                                                                     firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/2FA").set({
                                                                         status
                                                                     });
-            
+                                                                    var authenticated = true
+                                                                    firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession").set({
+                                                                                authenticated
+                                                                            });
+                                                                    window.scrollTo(0,document.body.scrollHeight);
                                                                     document.getElementById("setup").style.visibility = "hidden";
                                                                     document.getElementById("authconfirmenable").style.visibility = "hidden";
                                                                     document.getElementById("authconfirmdisable").style.visibility = "visible";
@@ -844,6 +848,7 @@
                                                                     firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/2FA").set({
                                                                         status
                                                                     });
+                                                                    window.scrollTo(0,0);
                                                                     document.getElementById("setup").style.visibility = "visible";
                                                                     document.getElementById("authconfirmenable").style.visibility = "visible";
                                                                     document.getElementById("authconfirmdisable").style.visibility = "hidden";
