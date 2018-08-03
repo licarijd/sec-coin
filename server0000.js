@@ -5,7 +5,6 @@ var api = require('etherscan-api').init('41C25BI5DEW1WCVN7Z3VX2VH411MFHM9PQ');
 var speakeasy = require('speakeasy');
 var QRCode = require('qrcode');
 var firebase = require("firebase");
-var Hashids = require('hashids');
 //require('firebase/database');
 
 const app = express();
@@ -46,7 +45,6 @@ app.use(express.static(__dirname + '/'));
     res.sendFile(path.join(__dirname + 'index.html'));
   });*/
 
-//Get ethereum balance
   app.post('/getBalance', function(req, res){
 	console.log(req.body.account);
     //getBalance(req.body.account);	
@@ -62,62 +60,6 @@ app.use(express.static(__dirname + '/'));
     
 });
 
-//Generate hashcode for referrals
-app.post('/getReferralId', function(req, res){
-
-	console.log(req.body.uid);	
-	var chars = []
-	var hashids = new Hashids();
-
-	 for (var i = 0; i<req.body.uid.length; i++){
-                    chars.push(req.body.uid.charCodeAt(i))
-                    console.log(chars[i])
-                }
-    console.log("short id: " + hashids.encode(chars))
-    shortid = hashids.encode(chars)
-
-    res.send(shortid)
-});
-
-//Record the referrer and set the list of referrals for a given user
-app.post('/getReferrerId', function(req, res){
-
-	console.log(req.body.uid);	
-	console.log(req.body.shorturl);
-
-	var chars = []
-	var referrerId = ""
-	var hashids = new Hashids();
-
-	var chars = hashids.decode(req.body.shorturl)
-
-	console.log("chars: " + chars)
-
-	 for (var i = 0; i<chars.length; i++){
-	 				console.log("chars loop: " + chars[i] + "    " + String.fromCharCode(chars[i]))
-
-	 				var newChar = String.fromCharCode(chars[i]) + ""
-	 				//var test = referrerId+newChar
-	 				//console.log(test)
-                    referrerId += newChar
-                    console.log(referrerId)
-                }
-    console.log("referrer id: " + referrerId)
-
-    res.send(referrerId)
-
-    firebase.database().ref("/users/" + req.body.uid + "/referrer").set({
-        referrerId
-    });
-
-    var newReferral = req.body.uid
-
-    firebase.database().ref("/users/" + referrerId + "/referrals").push({
-        newReferral
-    });
-});
-
-//Generate the keys to be used for 2FA
 app.post('/generate2FAData', function(req, res){
     console.log("user ID: " + req.body.uid);
     var userToken = req.body.uid
@@ -143,7 +85,6 @@ app.post('/generate2FAData', function(req, res){
     res.send("success")
 });
 
-//Send the image data to display a QR code on the frontend for verification
 app.post('/getQRCode', function(req, res){
     console.log("user ID used for QR Code: " + req.body.uid);
     
@@ -195,10 +136,10 @@ var token = speakeasy.totp({
     
 });
 
-//Check validity of a 2FA token
+
 app.post('/verifyQRCode', function(req, res){
 
- console.log("token" + req.body.token) 
+ console.log(req.body.token) 
  var userToken = req.body.token 
   
 //get secret
@@ -231,7 +172,6 @@ var verified = speakeasy.totp.verify({
 });*/
 });
 
-//Display eth balance in a given account
 function getBalance(account) {
 		
     var balance = api.account.balance(/*'0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae'*/account);
@@ -241,7 +181,7 @@ function getBalance(account) {
     });
   };
 
-//TEST CODE 
+
 function generate2FAData(userID){
     var secret = speakeasy.generateSecret({length: 20});
     console.log(secret.base32); // Save this value to your DB for the user

@@ -771,7 +771,7 @@
             
                                                         var xhttp = new XMLHttpRequest;
                                             
-                                                        xhttp.open("POST", "https://thrintel-market.herokuapp.com/generate2FAData", true);
+                                                        xhttp.open("POST", "/generate2FAData", true);
                                                         xhttp.setRequestHeader("Content-Type", "application/json");
                                                         console.log(firebase.auth().currentUser.uid)
                                                         xhttp.send(JSON.stringify({uid:firebase.auth().currentUser.uid}));
@@ -783,7 +783,7 @@
                                                     function getQRCode(){
                                                         var xhttp = new XMLHttpRequest;
                                     
-                                                            xhttp.open("POST", "https://thrintel-market.herokuapp.com/getQRCode", true);
+                                                            xhttp.open("POST", "/getQRCode", true);
                                                             xhttp.setRequestHeader("Content-Type", "application/json");
                                                             //console.log(data)
                                                             xhttp.send(JSON.stringify({uid:firebase.auth().currentUser.uid}));
@@ -807,7 +807,7 @@
                                                         console.log("token: " + token + "....verifying...")
                                                         var xhttp = new XMLHttpRequest;
                                     
-                                                            xhttp.open("POST", "https://thrintel-market.herokuapp.com/verifyQRCode", true);
+                                                            xhttp.open("POST", "/verifyQRCode", true);
                                                             xhttp.setRequestHeader("Content-Type", "application/json");
                                                             console.log(token)
                                                             xhttp.send(JSON.stringify({token:token,uid:firebase.auth().currentUser.uid}));
@@ -838,7 +838,7 @@
             
                                                         var xhttp = new XMLHttpRequest;
                                     
-                                                            xhttp.open("POST", "https://thrintel-market.herokuapp.com/verifyQRCode", true);
+                                                            xhttp.open("POST", "/verifyQRCode", true);
                                                             xhttp.setRequestHeader("Content-Type", "application/json");
                                                             
                                                             xhttp.send(JSON.stringify({token:token,uid:firebase.auth().currentUser.uid}));
