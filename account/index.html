@@ -42,6 +42,7 @@
                             setReferralData()
                         } else {
                         console.log("unverified user")
+                        location.href = "account/accept-terms.html"
                       }
 		        }, function (errorObject) {
   			        console.log("error loading eth address: " + errorObject);
