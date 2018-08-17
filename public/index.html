@@ -1,65 +1,651 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <!DOCTYPE html>
+    <html lang="es">
+    
+<!-- Mirrored from vinchain.io/es/register by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 May 2018 19:13:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-messaging.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-functions.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyB6sGgioVysu3zWtQGTjr8CI1srmz3MVvk",
+                authDomain: "thrintel-market.firebaseapp.com",
+                databaseURL: "https://thrintel-market.firebaseio.com",
+                projectId: "thrintel-market",
+                storageBucket: "thrintel-market.appspot.com",
+                messagingSenderId: "598987192395"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <link rel="canonical" href="../index.html"/>
+        <link href="../index.html" hreflang="en" rel="alternate">
+        <link href="../es.html" hreflang="es" rel="alternate">
+        <link rel="icon" href="../fav.ico">
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, height=device-height, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/jquery.fancybox.min.css" type="text/css" media="screen"/>
+        <title>Login or Register | VINchain</title>
+        <meta data-react-helmet="true" property="og:title" content="VINCHAIN.IO"/>
+        <meta data-react-helmet="true" property="og:description"
+              content="Buy early to get the biggest discount! Join the team that will change automotive industry! Start now and get the highest bonus! Don’t miss your chance to reach the highest success together with VINchain. "/>
+        <meta data-react-helmet="true" property="og:url" content="../index.html"/>
+        <meta data-react-helmet="true" property="og:image" content="../img/new-baner.png"/>
+        <meta data-react-helmet="true" property="og:type" content="website"/>
+        <meta data-react-helmet="true" property="og:locale" content="en_US"/>
+        <meta data-react-helmet="true" property="og:updated_time" content="1518444253"/>
+        <!-- Google Tag Manager 
+        <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    '../../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MN5MQ88');</script>
+         End Google Tag Manager -->
+        <meta description="Login to VINchain or register for an account and become a member. Our platform is an open system and anyone can join and benefit from our network.">
+<link href="css/all7a00.css?v=n80" rel="stylesheet">    </head>
+<body id="page-top" class="b-lng-es">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.3.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.3.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.3.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.3.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.3.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+        <!-- Google Tag Manager (noscript) 
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN5MQ88"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <End Google Tag Manager (noscript) -->
+    
+        
+    
+            <header class="masthead navbar-white">
+    
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-white" id="mainNav">
+            
+                    
+                    <div class="left-panel" id="left-panel">
+                        <div class="left-head relative text-center">
+                            <img src="../img/logo4.png" alt="">
+                            <img class="menu-close" src="../img/close.png" alt="">
+                        </div>
+                        <hr>
+                        <ul class="t-20">
+                            <!--<li class="nav-item">
+                <a class="nav-link " href=""></a>
+            </li>-->
+            
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger green-link" href="report/check.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha version        </font></font><div class="live-box"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></div>
+                </a>
+            </li>
+            
+            <li class="nav-item relative cll-li">
+                <a class="nav-link pointer relative cll" style="z-index: 1;" tabindex="" onclick="gtag('event', 'view', { 'event_category': 'wp','event_label':'header'});" role="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                    White book        </font></font><i class="fa fa-caret-down"></i>
+                    <i class="fa fa-caret-up"></i>
+                </a>
+                <div class="wpc">
+                    <ul>
+                        <li><a target="_blank" href="files/white_paper_en.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Versión en Español</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_ru.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Русская версия</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_de.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deutsche version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_kr.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Korean version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_ar.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arabic version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_nl.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dutch version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_jp.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Japanese version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_pt.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Portuguese version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_es.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spanish version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_tr.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Turkish version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_ch.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chinese version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_fr.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">French version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_it.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Italian version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_vn.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vietnamese version</font></font></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pointer" href="../files/wp_summary.pdf" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WP Summary</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pointer" onclick="gtag('event', 'view', { 'event_category': 'op','event_label':'header'});" href="../files/new_one_paper.pdf" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Draft</font></font></a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link " href="blog.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Blog</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="../index.html#team"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Equipment</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="../index.html#news"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">News</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a href="faq.html" class="nav-link "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frequent questions</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a href="app.html" class="nav-link "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Application</font></font></a>
+            </li>
+            
+                        </ul>
+                        <div class="left-btn t-30">
+                                                <a href="login.html" class="btn btn-outline-info btn-block btn-login r-8" style="padding: 12px 22px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    Login / Register                     </font></font></a>
+                                                                <a class="btn btn-d-blue btn-tel btn-block t-10" tabindex="" href="https://t.me/vinchainio" onclick="gtag('event', 'click', { 'event_category': 'telegram_click','event_label':'header'});yaCounter46552020.reachGoal('telegram');" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Join us on Telegram                        </font></font><img src="../img/telegram_header.png"></a>
+                                        </div>
+                        <hr class="sec-hr">
+            
+                        <div class="lang-hold relative">
+                            <a href="login.html"><img src="../img/en.png"></a>
+            <a href="login.html"><img src="../img/es.png"></a>
+            <a href="../ru/login.html"><img src="../img/ru.png"></a>
+            <a href="../tr/login.html"><img src="../img/tr.png"></a>
+            <a href="../de/login.html"><img src="../img/de.png"></a>
+            <a href="../it/login.html"><img src="../img/it.png"></a>
+            <a href="../nl/login.html"><img src="../img/nl.png"></a>
+            <a href="../ar/login.html"><img src="../img/ar.png"></a>
+            <a href="../pt/login.html"><img src="../img/pt.png"></a>
+            <a href="../jp/login.html"><img src="../img/jp.png"></a>
+            <a href="../ch/login.html"><img src="../img/ch.png"></a>
+            <a href="../kr/login.html"><img src="../img/kr.png"></a>
+            <a href="../vn/login.html"><img src="../img/vn.png"></a>
+            
+                        </div>
+                    </div>
+                    <div class="head-overlay"></div>
+                    <div class="container-fluid relative">
+                                    <button class="navbar-toggler toggle-nav" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="burger-x"></span>
+                        </button>
+                        <a class="navbar-brand hiddenjs-scroll-trigger" href="../es.html"><img id="logo" src="../img/logo-vinchain-white.png"><img id="logo-scroll" style="display: none" src="../img/logo-vinchain-black.png"></a>
+                        <div class="collapse navbar-collapse hide-md" id="navbarResponsive">
+                            <ul class="navbar-nav">
+                                <!--<li class="nav-item">
+                <a class="nav-link " href=""></a>
+            </li>-->
+            
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger green-link" href="report/check.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha version        </font></font><div class="live-box"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></div>
+                </a>
+            </li>
+            
+            <li class="nav-item relative cll-li">
+                <a class="nav-link pointer relative cll" style="z-index: 1;" tabindex="" onclick="gtag('event', 'view', { 'event_category': 'wp','event_label':'header'});" role="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                    White book        </font></font><i class="fa fa-caret-down"></i>
+                    <i class="fa fa-caret-up"></i>
+                </a>
+                <div class="wpc">
+                    <ul>
+                        <li><a target="_blank" href="files/white_paper_en.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Versión en Español</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_ru.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Русская версия</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_de.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deutsche version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_kr.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Korean version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_ar.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arabic version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_nl.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dutch version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_jp.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Japanese version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_pt.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Portuguese version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_es.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spanish version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_tr.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Turkish version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_ch.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chinese version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_fr.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">French version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_it.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Italian version</font></font></a></li>
+                        <li><a target="_blank" href="files/white_paper_vn.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vietnamese version</font></font></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pointer" href="../files/wp_summary.pdf" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WP Summary</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pointer" onclick="gtag('event', 'view', { 'event_category': 'op','event_label':'header'});" href="../files/new_one_paper.pdf" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Draft</font></font></a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link " href="blog.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Blog</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="../index.html#team"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Equipment</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="../index.html#news"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">News</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a href="faq.html" class="nav-link "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frequent questions</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a href="app.html" class="nav-link "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Application</font></font></a>
+            </li>
+            
+                            </ul>
+                        </div>
+            
+                        <div class="form-inline hide-md head-right">
+            
+                                                <a href="login.html" class="btn btn-outline-info btn-login r-8" style="padding: 12px 22px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    Enter. Register                    </font></font></a>
+                            
+                                                <a class="btn btn-d-blue btn-tel" tabindex="" href="https://t.me/vinchainio" onclick="gtag('event', 'click', { 'event_category': 'telegram_click','event_label':'header'});yaCounter46552020.reachGoal('telegram');" target="_blank">
+                                    <img src="../img/soc_tg.png"></a>
+                            
+                            <div class="lng-hold">
+             
+                <div class="collapse" id="lng">
+            
+                    <a href="login.html"><img src="../img/en.png"></a>
+            <a href="../ru/login.html"><img src="../img/ru.png"></a>
+            <a href="../tr/login.html"><img src="../img/tr.png"></a>
+            <a href="../de/login.html"><img src="../img/de.png"></a>
+            <a href="../it/login.html"><img src="../img/it.png"></a>
+            <a href="../nl/login.html"><img src="../img/nl.png"></a>
+            <a href="../ar/login.html"><img src="../img/ar.png"></a>
+            <a href="../pt/login.html"><img src="../img/pt.png"></a>
+            <a href="../jp/login.html"><img src="../img/jp.png"></a>
+            <a href="../ch/login.html"><img src="../img/ch.png"></a>
+            <a href="../kr/login.html"><img src="../img/kr.png"></a>
+            <a href="../vn/login.html"><img src="../img/vn.png"></a>
+                </div>
+            </div>
+                        </div>
+                    </div>
+                </nav>
+                </header>
+    
+    
+    <div class="site-signup pb-30 acc-form">
+        <script>
+            function signInGoogle(){
+                href="register.html"
+                console.log("hello")
+                var provider = new firebase.auth.GoogleAuthProvider();
+    
+                firebase.auth().signInWithPopup(provider).then(function(result) {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                var token = result.credential.accessToken;
+                // The signed-in user info.
+                var user = result.user;
+    
+                console.log("User: " + result.user);
+                //location.href = "account/index.html"
+                console.log(firebase.auth().currentUser.email);
+    
+                console.log("user: " + result.additionalUserInfo.isNewUser)
+    
+                if (result.additionalUserInfo.isNewUser==true){
+    
+                    console.log("new user")
+    
+                    location.href = "https://thrintel-market.firebaseapp.com/account/accept-terms.html"
+                } else {
+                    console.log("existing user")
+                    var authenticated = false
+                    firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/authenticatedSession").set({
+                                authenticated
+                            }).then(function(result) {
+                                console.log("done")
+                                location.href = "https://thrintel-market.firebaseapp.com/account/index.html"
+                            });
+                }
+                
+                
+                // ...
+                }).catch(function(error) {
+                    // Handle Errors here.
+                    var errorCode = error.code;
+                    console.log(error)
+                    var errorMessage = error.message;
+                    // The email of the user's account used.
+                    var email = error.email;
+                    // The firebase.auth.AuthCredential type that was used.
+                    var credential = error.credential;
+                    // ...
+                });
+                console.log("user: " + + errorCode + user);
+                firebase.auth().signInWithRedirect(provider)
+            }
+            function signUp(email, password){
+                firebase.auth().createUserWithEmailAndPassword(email, password).then(function(result) {
+                    console.log("user: " + firebase.auth().currentUser.uid)
+    
+                    //Set 2FA status
+                    var status="off"
+                                firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/2FA").set({
+                                    status
+                                });
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+
+                
+                    
+                    // ...
+                }).then(function(result) {
+                    if(firebase.auth().currentUser.uid){
+                    var url = new URL(window.location.href);
+                    location.href = "https://thrintel-market.firebaseapp.com/account/accept-terms.html?referrer=" + url.searchParams.get("referrer")
+                }
+                }).catch(function(error) {
+                    // Handle Errors here.
+    
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    // ...
+                });
+    
+    
+            }
+    
+        </script>
+        <div class="container">
+            <h1 class="h-xs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Register</font></font></h1>
+                            <div class="row bs-2">
+                <div class="col l-col">
+                    <img src="../img/logo3.png" alt="">
+                </div>
+                <div class="col wb pan-hold-sm">
+                    <div class="center-block-sm">
+                        <div class="t-8 b-10 clearfix">
+                            <div class="text-center bg-txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Already a member?                        </font></font></div>
+                            <div class="text-center bg-link">
+                                <a class="upper f-18 t-10 btn-outline-info btn btn-block" href="login.html" style="font-weight:900"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Enter here</font></font></a>                        </div>
+                        </div>
+                        <hr>
+    
+                        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JOIN WITH </font></font></h4>
+                        <div class="row">
+                            <div class="col col-xxs">
+                                <a onclick="gtag('event', 'click', { 'event_category': 'fb_register','event_label':'register'}); fbq('track', 'Lead');return document.location.href='https://www.facebook.com/dialog/oauth?client_id=533425390347558&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fvinchain.io%2Faccount%2Fauth%3Fauthclient%3Dfacebook&amp;xoauth_displayname=My%20Application&amp;scope=email&amp;state=1d9d1e91679571f1fb5167fa8b87225ae86ebe7db023f2d9b065da2399a01d53';" tabindex="" class="btn btn-facebook btn-block bld relative">
+                                    <img src="../img/f.png" alt=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Facebook</font></font></a>
+                            </div>
+                            <div class="col col-xxs">
+                                <a onclick="signInGoogle()" tabindex="" class="btn btn-google btn-block bld t-0 t-10-xs relative">
+                                    <img src="../img/g.png" alt=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Google</font></font></a>
+                            </div>
+                            <div class="w-100 t-10"></div>
+                            <div class="col col-xxs">
+                                <a onclick="gtag('event', 'click', { 'event_category': 'linkedin_register','event_label':'register'});fbq('track', 'Lead'); return document.location.href='https://www.linkedin.com/uas/oauth2/authorization?client_id=77nu4vxwygdgrk&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fvinchain.io%2Faccount%2Fauth%3Fauthclient%3Dlinkedin&amp;xoauth_displayname=My%20Application&amp;scope=r_basicprofile%20r_emailaddress&amp;state=160a8f05d0acb96bac8c7eaffd22cfc1f780ea9901d3f8290abaf16cbac5e8b7';" tabindex="" class="btn btn-linkedin btn-block bld t-0 t-10-xs relative">
+                                    <img src="../img/linked-white.png" alt=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LinkedIn</font></font></a>
+                            </div>
+                            <div class="col col-xxs">
+                                <a onclick="gtag('event', 'click', { 'event_category': 'twitter_register','event_label':'register'});fbq('track', 'Lead'); return document.location.href='https://api.twitter.com/oauth/authenticate?oauth_token=yl2k1gAAAAAA3ho9AAABY0ZTI7k';" tabindex="" class="btn btn-twitter btn-block bld t-0 t-10-xs relative">
+                                    <img src="../img/soc_twitter.png" alt=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Twitter</font></font></a>
+                            </div>
+                        </div>
+    
+                        <h5 class="t-20 b-10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OR</font></font></h5>
+                        <form id="form-signup" action="https://vinchain.io/es/register" method="post">
+                        <div class="g-recaptcha" id="recapture1" data-form="form-signup" data-id="1"></div>
+    
+                        <input type="hidden" class="g-recaptcha-response" name="g-recaptcha-response">
+    
+                        <div class="form-group field-signupform-name required">
+    
+    <input type="text" id="signupformname" class="form-control" name="SignupForm[name]" autofocus="" placeholder="Email" aria-required="true">
+    
+    <p class="help-block help-block-error"></p>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+                        <div class="form-group field-signupform-email required">
+    
+    <input type="text" id="signupformemail" class="form-control" name="SignupForm[email]" placeholder="Password" aria-required="true">
+    
+    <p class="help-block help-block-error"></p>
+    </div>
+    
+    
+                        <div class="form-group text-center t-20">
+                            <button type="button" class="btn btn-red btn-block" onclick="return signUp(signupformname.value, signupformemail.value);"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Register</font></font></button>                        <p class="lock t-15 f-13">
+                                <img src="../img/lock.png"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">We respect </font></font><a data-toggle="modal" class="emailprivacy" href="site/email-privacy.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the privacy of your email</font></font></a>                        </p>
+                        </div>
+    
+                        </form>                </div>
+    
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="row contact-row">
+    
+                <div class="col-sm-4">
+                    <img class="img-fluid b-lazy" src="../img/1.png" data-src="/img/phone-gr.png" alt="">
+                    <a class="phone" href="tel:+13862794040"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+1 386 279 40 40</font></font></a>
+                </div>
+                <div class="col-sm-4">
+                    <img class="img-fluid b-lazy" src="../img/1.png" data-src="/img/mail-gr.png" alt="">
+                    <a class="lbc" href="mailto:info@vinchain.io" onclick="gtag('event', 'click', { 'event_category': 'email_click','event_label':'down'})"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">info@vinchain.io</font></font></a>
+                </div>
+                <div class="col-sm-4">
+                    <img class="img-fluid b-lazy" src="../img/1.png" data-src="/img/skype-gr.png" alt="">
+                    <span class="lbc in-block"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Support VINChain.IO </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">live: info_745170</font></font></span>
+                </div>
+            </div>
+    
+            <div class="f-links row t-10 justify-content-center mx-auto" style="max-width: 980px;">
+                <div class="col"><a href="../vn/privacy.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Privacy Policy</font></font></a></div>
+                <div class="col"><a href="../vn/sale-agreement.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sales agreement</font></font></a></div>
+                <div class="col"><a href="../vn/kyc.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Meet Your Customer
+    </font></font></a></div>
+                <div class="col"><a href="../vn/terms.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Terms and Conditions
+    </font></font></a></div>
+                <div class="col"><a target="_blank" href="../files/LegalOpinion.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Legal Opinion</font></font></a>
+                </div>
+            </div>
+        </div>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VinChain OÜ, 14322374, Harju maakond, Tallinn, Lasnamäe linnaosa, Punane tn 68, 13619</font></font></p>
+        <p style="padding-top: 5px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© VINChain.IO 2018</font></font></p>
+        </footer>
+    <div class="g-recaptcha" id="google-recaptcha" data-id="1"></div>
+    <!-- 
+    <script type="text/javascript" src="../../cdn.onesignal.com/sdks/OneSignalSDK.js" async defer></script>
+    
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-108545106-1"></script>
+    
+    
+    <script type="text/javascript" src="../../biggi.co/js/track-1.0.0.min.js" async defer></script>
+    
+    <script src="https://secure.adnxs.com/seg?add=11310227&amp;t=1" type="text/javascript" async defer></script>
+    
+    
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+    
         }
-      });
+    
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        else window.onload = downloadJSAtOnload;
     </script>
-  </body>
+    
+    Twitter universal website tag code 
+    <script>
+        !function (e, t, n, s, u, a) {
+            e.twq || (s = e.twq = function () {
+                s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+            }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '../../static.ads-twitter.com/uwt.js',
+                a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+        }(window, document, 'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init', 'nywp5');
+        twq('track', 'PageView');
+    </script>-->
+    <!-- End Twitter universal website tag code -->
+    <!--
+    <a href="http://scroogefrog.com/en/?referrer_id=24099"><img src="../../stat.clickfrog.ru/img/clfg_ref/icon_0.png"
+                                                           alt="delete adware"></a>
+    <div id="clickfrog_counter_container" style="width:0px;height:0px;overflow:hidden;"></div>
+    <script type="text/javascript">(function (d, w) {
+            var clickfrog = function () {
+                if (!d.getElementById('clickfrog_js_container')) {
+                    var sc = document.createElement('script');
+                    sc.type = 'text/javascript';
+                    sc.async = true;
+                    sc.src = "../../stat.clickfrog.ru/c2a3b.js?r=" + Math.random();
+                    sc.id = 'clickfrog_js_container';
+                    var c = document.getElementById('clickfrog_counter_container');
+                    c.parentNode.insertBefore(sc, c);
+                }
+            };
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", clickfrog, false);
+            } else {
+                clickfrog();
+            }
+        })(document, window);</script>
+    <noscript>
+        <div style="width:0px;height:0px;overflow:hidden;"><img src="http://stat.clickfrog.ru/no_script.php?img"
+                                                                style="width:0px; height:0px;" alt=""/></div>
+    </noscript>
+    <script type="text/javascript">var clickfrogru_uidh = '23daa679eba8243630b35270aba77e0f';</script>-->
+    
+    
+    <!--
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: VIN_chain
+    URL of the webpage where the tag is expected to be placed: https://confideal.io
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 03/14/2018
+    -->
+    <!--<script type="text/javascript">
+        var axel = Math.random() + "";
+        var a = axel * 10000000000000;
+        document.write('<iframe src="https://8220694.fls.doubleclick.net/activityi;src=8220694;type=invmedia;cat=qi5j3glw;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    </script>
+    <noscript>
+        <iframe src="https://8220694.fls.doubleclick.net/activityi;src=8220694;type=invmedia;cat=qi5j3glw;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    </noscript>-->
+    <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+    
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://q.quora.com/_/ad/2309480130324632a02e18477c35e3d4/pixel?tag=ViewContent&amp;noscript=1"/>
+    </noscript>
+    
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt=""
+             src="https://dc.ads.linkedin.com/collect/?pid=159497&amp;fmt=gif"/>
+    </noscript>
+    <!--
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=148092285820055&amp;ev=PageView&amp;noscript=1"/>
+    </noscript>
+    
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/46552020" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <script src="../landing/jquery/jquery.min.js"></script>
+    <script src="../assets/b8ab4d44/yii.js"></script>
+    <script src="../js/allecec.js?v=n56"></script>
+    <script type="text/javascript">$(document).ready(function(){
+                        fbq('track', 'InitiateCheckout');
+                 });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-108545106-1');
+    
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(['init', {
+          
+          appId: 'df22d81a-8175-4b6b-99a0-007407b84c3d',
+          autoRegister: true,
+          notifyButton: {
+            enable: false /* Set to false to hide */
+          }
+        }]);
+    !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      '../../connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '148092285820055');
+      fbq('track', 'PageView');
+    !function(q,e,v,n,t,s){if(q.qp) return; n=q.qp=function(){n.qp?n.qp.apply(n,arguments):n.queue.push(arguments);}; n.queue=[];t=document.createElement(e);t.async=!0;t.src=v; s=document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);}(window, 'script', '../../a.quora.com/qevents.js');
+    qp('init', '2309480130324632a02e18477c35e3d4');
+    qp('track', 'ViewContent');
+    _linkedin_data_partner_id = "159497";
+        (function(){var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";b.async = true;
+        b.src = "../../snap.licdn.com/li.lms-analytics/insight.min.js";
+        s.parentNode.insertBefore(b, s);})();
+    
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46552020 = new Ya.Metrika({
+                    id:46552020,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+            
+            var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "../../mc.yandex.ru/metrika/watch.js";
+            
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");</script>
+    <script type="text/javascript">jQuery(function ($) {
+      window.intercomSettings = {
+        app_id: "bfhy01mo"
+      };
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bfhy01mo';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+    
+    
+          $('.emailprivacy').click(function() {
+              var modal_url = $(this).attr('href');
+              $('div#emptyModal .modal-body').addClass('privacy_policy').load(modal_url, function()
+              {
+                  var title = '<h5 class="modal-title" id="exampleModalLongTitle">Politica de Privacidad de Correo Electrónico</h5>';
+                  var close_btn = '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+                  $('div#emptyModal .modal-header').html(title + close_btn);
+                    $('#emptyModal').modal({show:true});
+              });
+          }); 
+    });</script> -->   <script>
+            var appLanguage = 'es';
+    
+            function createUrl(url) {
+                return (appLanguage === 'en' ? '' : ('/' + appLanguage)) + url;
+            }
+        </script>
+        <div class="modal fade" id="emptyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header"></div>
+                    <div class="modal-body"><p></p></div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var subscribe_url = '/es', check_email = 'Please, check your email address!';
+        </script>
+    
 </html>
