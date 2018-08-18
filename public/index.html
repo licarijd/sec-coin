@@ -283,7 +283,7 @@
     
                     console.log("new user")
     
-                    location.href = "https://thrintel-market.firebaseapp.com/account/accept-terms.html"
+                    location.href = "https://thrintel-market.herokuapp.com/account/accept-terms.html"
                 } else {
                     console.log("existing user")
                     var authenticated = false
@@ -291,7 +291,7 @@
                                 authenticated
                             }).then(function(result) {
                                 console.log("done")
-                                location.href = "https://thrintel-market.firebaseapp.com/account/index.html"
+                                location.href = "https://thrintel-market.herokuapp.com/account/index.html"
                             });
                 }
                 
@@ -328,7 +328,7 @@
                 }).then(function(result) {
                     if(firebase.auth().currentUser.uid){
                     var url = new URL(window.location.href);
-                    location.href = "https://thrintel-market.firebaseapp.com/account/accept-terms.html?referrer=" + url.searchParams.get("referrer")
+                    location.href = "https://thrintel-market.herokuapp.com/account/accept-terms.html?referrer=" + url.searchParams.get("referrer")
                 }
                 }).catch(function(error) {
                     // Handle Errors here.
