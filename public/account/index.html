@@ -57,7 +57,7 @@
             
             var xhttp = new XMLHttpRequest; 
 
-            xhttp.open("POST", "https://thrintel-market-web.herokuapp.com/getReferrerId", true);
+            xhttp.open("POST", "https://thrintel-market.herokuapp.com/getReferrerId", true);
             xhttp.setRequestHeader("Content-Type", "application/json");
             console.log("id for gen: " + firebase.auth().currentUser.uid)
             var data={uid:firebase.auth().currentUser.uid,shorturl:url.searchParams.get("referrer")}
@@ -142,9 +142,9 @@
                     location.href = "../login.html"
                 }*/
         </script>
-        <link rel="canonical" href="https://thrintel-market-web.herokuapp.com/"/>
-        <link href="https://thrintel-market-web.herokuapp.com/" hreflang="en" rel="alternate">
-        <link href="https://thrintel-market-web.herokuapp.com/" hreflang="es" rel="alternate">
+        <link rel="canonical" href="https://thrintel-market.herokuapp.com/"/>
+        <link href="https://thrintel-market.herokuapp.com/" hreflang="en" rel="alternate">
+        <link href="https://thrintel-market.herokuapp.com/" hreflang="es" rel="alternate">
         <link rel="icon" href="/fav.ico">
         <meta charset="utf-8">
         <meta name="viewport"
@@ -154,7 +154,7 @@
         <meta data-react-helmet="true" property="og:title" content="VINCHAIN.IO"/>
         <meta data-react-helmet="true" property="og:description"
               content="Buy early to get the biggest discount! Join the team that will change automotive industry! Start now and get the highest bonus! Don’t miss your chance to reach the highest success together with VINchain. "/>
-        <meta data-react-helmet="true" property="og:url" content="https://thrintel-market-web.herokuapp.com/"/>
+        <meta data-react-helmet="true" property="og:url" content="https://thrintel-market.herokuapp.com/"/>
         <meta data-react-helmet="true" property="og:image" content="https://vinchain.ioimg/new-baner.png"/>
         <meta data-react-helmet="true" property="og:type" content="website"/>
         <meta data-react-helmet="true" property="og:locale" content="en_US"/>
@@ -213,7 +213,7 @@ console.log("error loading eth address: " + errorObject);
         var xhttp = new XMLHttpRequest; 
 
         //xhttp.open("POST", "http://localhost:8080/getBalance", true);
-        xhttp.open("POST", "https://thrintel-market-web.herokuapp.com/getBalance", true);
+        xhttp.open("POST", "https://thrintel-market.herokuapp.com/getBalance", true);
         //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         //xhttp.send({"account": "0x281055afc982d96fab65b3a49cac8b878184cb16"});
         xhttp.setRequestHeader("Content-Type", "application/json");
@@ -1029,7 +1029,7 @@ var subscribe_url = '/es', check_email = 'Please, check your email address!';
                 console.log("verifying...")
                 var xhttp = new XMLHttpRequest;
 
-                    xhttp.open("POST", "https://thrintel-market-web.herokuapp.com/verifyQRCode", true);
+                    xhttp.open("POST", "https://thrintel-market.herokuapp.com/verifyQRCode", true);
                     xhttp.setRequestHeader("Content-Type", "application/json");
                     console.log(token)
                     xhttp.send(JSON.stringify({token:token,uid:firebase.auth().currentUser.uid}));

@@ -189,9 +189,9 @@
                 
             }
         </script>
-        <link rel="canonical" href="https://thrintel-market-web.herokuapp.com/"/>
-        <link href="https://thrintel-market-web.herokuapp.com/" hreflang="en" rel="alternate">
-        <link href="https://thrintel-market-web.herokuapp.com/" hreflang="es" rel="alternate">
+        <link rel="canonical" href="https://thrintel-market.herokuapp.com/"/>
+        <link href="https://thrintel-market.herokuapp.com/" hreflang="en" rel="alternate">
+        <link href="https://thrintel-market.herokuapp.com/" hreflang="es" rel="alternate">
         <link rel="icon" href="/fav.ico">
         <meta charset="utf-8">
         <meta name="viewport"
@@ -1873,7 +1873,7 @@
                                                             console.log("verifying...")
                                                             var xhttp = new XMLHttpRequest;
                                         
-                                                                xhttp.open("POST", "https://thrintel-market-web.herokuapp.com/verifyQRCode", true);
+                                                                xhttp.open("POST", "https://thrintel-market.herokuapp.com/verifyQRCode", true);
                                                                 xhttp.setRequestHeader("Content-Type", "application/json");
                                                                 console.log(token)
                                                                 xhttp.send(JSON.stringify({token:token,uid:firebase.auth().currentUser.uid}));
